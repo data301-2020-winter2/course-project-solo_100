@@ -1,7 +1,5 @@
 [![Work in Repl.it](https://classroom.github.com/assets/work-in-replit-14baed9a392b3a25080506f3b7b6d57f295ec2978f6f33ec97e36a161684cbe9.svg)](https://classroom.github.com/online_ide?assignment_repo_id=365868&assignment_repo_type=GroupAssignmentRepo)
-# Group YYY - {Short snappy Title of your project}
-
-- Your title can change over time.
+# Solo 100 - How r/WSB shook the stockmarket
 
 ## Milestones
 
@@ -9,18 +7,31 @@ Details for Milestone are available on Canvas (left sidebar, Course Project) or 
 
 ## Describe your topic/interest in about 150-200 words
 
-{Add your stuff here}
+Through the means of this project I would like to visualise/depict the story of how a community of united redditors took down the giant Hedge funds of Wall Street and got rich while doing the same.
+A few weeks a bunch of people from the social media platform reddit buying and propping up the stock of GameStop($GME) and a few other nearly dead stocks. There were throwing around slangs for the stock such as "To the moon 🚀" and "Diamond hands💎".
+
+My interest in how social media can influence financial markets piqued during this time, and using this project I wish to analyse how the sentiments of people on social media was reflected in the stock market.
 
 ## Describe your dataset in about 150-200 words
 
-{Add your stuff here}
+I have chosen the dataset from [Kaggle](https://www.kaggle.com/gpreda/reddit-wallstreetsbets-posts) which has a CC0 Public domain license.
+The dataset is a collection of 30000+ reddit posts from the subreddit [r/wallstreetbets](https://www.reddit.com/r/wallstreetbets/). 
+It has the following columns: 
+-   title
+- score
+- id
+- url
+- comms_num
+- creation_timestamp
+- message_body
+- data/time_timestamp
+
+I will use this to analyse how the posts in this dataset reflected the prices in the stock market during this timeframe.
 
 ## Team Members
 
-- Person 1: one sentence about you!
-- Person 2: one sentence about you!
-- Person 3: one sentence about you!
+- Person 1: Yash Atreya
 
 ## References
 
-{Add your stuff here}
+Dataset: https://www.kaggle.com/gpreda/reddit-wallstreetsbets-posts
