@@ -35,3 +35,10 @@ I will use this to analyse how the posts in this dataset reflected the prices in
 ## References
 
 Dataset: https://www.kaggle.com/gpreda/reddit-wallstreetsbets-posts
+
+---
+## MARKDOWN EXPLANATION
+
+- The hash symbol (#) is for various headings.
+- The form [some_link](https://somelin k.xom) is for hyperlinks in markdown
+- The (---) three hypens are for line-breaks

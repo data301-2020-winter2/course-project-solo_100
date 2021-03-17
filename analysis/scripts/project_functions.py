@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np 
 import seaborn as sns
 import matplotlib.pyplot as plt
+import matplotlib.dates as md
 from datetime import date
 def load_and_process(url_or_csv: str):
     df1 = (
@@ -25,5 +26,18 @@ def corr_matrix(df: pd.DataFrame):
 
 def score_comments(df: pd.DataFrame):
     sns.scatterplot(data=df, x='num_of_comments', y='score', hue='body_is_null')
+    plt.show()
+
+def against_timestamp(df: pd.DataFrame):
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+    fig, ax = plt.subplots()
+    sns.lineplot(ax=ax, x='timestamp', y='score', data=df).set_title('Score at various timestamps')
+    # specify the position of the major ticks at the beginning of the week
+    ax.xaxis.set_major_locator(md.WeekdayLocator(byweekday = 1))
+    # specify the format of the labels as 'year-month-day'
+    ax.xaxis.set_major_formatter(md.DateFormatter('%Y-%m-%d'))
+    # (optional) rotate by 90° the labels in order to improve their spacing
+    plt.setp(ax.xaxis.get_majorticklabels(), rotation = 90)
+    ax.xaxis.set_minor_locator(md.DayLocator(interval = 1))
     plt.show()
     
