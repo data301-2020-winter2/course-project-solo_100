@@ -5,6 +5,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib.dates as md
 from datetime import date
+
+'''
+Milestone 2: Task - 3 is completed here
+'''
 def load_and_process(url_or_csv: str):
     df1 = (
         pd.read_csv(url_or_csv)
@@ -21,11 +25,11 @@ def load_and_process(url_or_csv: str):
 def corr_matrix(df: pd.DataFrame):
     df1 = pd.DataFrame(data=df, columns=['score', 'num_of_comments', 'body_is_null'])
     cor = df1.corr()
-    sns.heatmap(cor, annot=True)
+    sns.heatmap(cor, annot=True).set_title('Correlation between fields')
     plt.show()
 
 def score_comments(df: pd.DataFrame):
-    sns.scatterplot(data=df, x='num_of_comments', y='score', hue='body_is_null')
+    sns.scatterplot(data=df, x='num_of_comments', y='score', hue='body_is_null').set_title('Impact of Body on Score and Comments')
     plt.show()
 
 def against_timestamp(df: pd.DataFrame):
