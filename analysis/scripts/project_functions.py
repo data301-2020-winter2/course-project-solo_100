@@ -68,3 +68,5 @@ def contains_gme(df: pd.DataFrame):
     plt.legend(loc='upper left')
     plt.show()
     
+def to_csv(df: pd.DataFrame, path: str):
+    df.to_csv(path)
