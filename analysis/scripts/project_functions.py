@@ -68,5 +68,21 @@ def contains_gme(df: pd.DataFrame):
     plt.legend(loc='upper left')
     plt.show()
     
-def to_csv(df: pd.DataFrame, path: str):
+def prep_tableau(df: pd.DataFrame, path: str):
+    df.drop(columns=['id'], inplace=True)
+    t = df['title']
+    b = df['body']
+    contains_gme = []
+    for i in range(t.size):
+        if((t[i] != None and t[i] != np.NaN and re.search(r"gme", str(t[i]), flags=re.IGNORECASE | re.MULTILINE) != None) or (b[i] != None and b[i] != np.NaN and re.search(r"gme", str(b[i]), flags=re.IGNORECASE | re.MULTILINE) != None)):
+            contains_gme.append(True)
+        else:
+            contains_gme.append(False)
+
+    df['contains_gme'] = contains_gme
+
+    df.dropna(subset=['title', 'score', 'num_of_comments', 'body_is_null', 'timestamp', 'contains_gme'], inplace=True)
+    df.drop(columns=['body', 'title'], inplace=True)
     df.to_csv(path)
+    return df
+    
