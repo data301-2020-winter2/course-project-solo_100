@@ -28,6 +28,10 @@ It has the following columns:
 
 I will use this to analyse how the posts in this dataset reflected the prices in the stock market during this timeframe.
 
+---
+## Online Dashboard
+
+[Tableau](https://us-west-2b.online.tableau.com/#/site/data301/workbooks/346993?:origin=card_share_link)
 ## Team Members
 
 - Person 1: Yash Atreya

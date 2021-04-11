@@ -83,6 +83,9 @@ def prep_tableau(df: pd.DataFrame, path: str):
 
     df.dropna(subset=['title', 'score', 'num_of_comments', 'body_is_null', 'timestamp', 'contains_gme'], inplace=True)
     df.drop(columns=['body', 'title'], inplace=True)
+    df['score'] = df['score'].astype(int)
+    df['num_of_comments'] = df['num_of_comments'].astype(int)
+    
     df.to_csv(path)
     return df
     
